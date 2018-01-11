@@ -10,7 +10,7 @@ class QuickClass
     # define public attr_accessor methods for all the attributes
     attr_accessor *@attributes.keys
     # define a .default method that invokes #initialize with .attributes
-    define_singleton_method(:default) { new @attributes }
+    define_singleton_method(:default) { |**opts| new @attributes.merge(opts) }
   end
   # read default attributes
   def self.attributes; @attributes; end

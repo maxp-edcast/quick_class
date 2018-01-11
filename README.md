@@ -18,14 +18,14 @@ print Foo.attributes
 ```
 
 `initialize` is generated and converted any passed arguments to instance variables.
-The instance variables are accessible through generator `attr_accessor` functions.
+The instance variables are accessible through generated `attr_accessor` functions.
 
 ```
 Foo.new
-# => #<Foo:0x007ff5e8a70d10>
+# => #<Foo:xxxxxxxxxxxxxxx>
 
 foo = Foo.new a: 2
-# => #<Foo:0x007ff5e8a70d10 @a=2>
+# => #<Foo:xxxxxxxxxxxxxxx @a=2>
 
 foo.a
 # => 2
@@ -38,8 +38,16 @@ The `default` method is also defined, which is the same as passing `attributes` 
 
 ```
 Foo.default
-# => #<Foo:0x007fef7398f6b0 @a=0, @b=1>
+# => #<Foo:xxxxxxxxxxxxxxx @a=0, @b=1>
 ```
+
+It accepts arguments as well:
+
+```
+Foo.default b: 2
+# => #<Foo:xxxxxxxxxxxxxxx @a=0, @b=2>
+```
+
 
 It works with interitance also:
 
@@ -49,7 +57,7 @@ class Bar < Foo
 end
 
 Bar.default
-# => <Bar:0x007f9868906b60 @a=0, @b=1, @c=2>
+# => <Bar:xxxxxxxxxxxxxxx @a=0, @b=1, @c=2>
 ```
 
 Internally, the `attributes=` method is dynamically generating `attr_accessor` and `default` functions.
