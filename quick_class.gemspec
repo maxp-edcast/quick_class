@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.authors     = ["max pleaner"]
   s.email       = 'maxpleaner@gmail.com'
   s.required_ruby_version = '~> 2.3'
-  s.homepage    = "http://rubygems.org/gems/quick_class"
+  s.homepage    = "http://github.com/maxp-edcast/quick_class"
   s.files       = Dir["lib/**/*.rb", "bin/*", "**/*.md", "LICENSE"]
   s.require_path = 'lib'
   s.required_rubygems_version = ">= 2.7.3"
