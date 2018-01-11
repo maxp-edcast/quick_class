@@ -3,9 +3,7 @@ class QuickClass
   # main public method - define attributes for a class
   def self.attributes=(**keyvals)
     # if attributes is already defined, delete the attr_accessor methods
-    @attributes&.each_key do |k|
-      [:"#{k}", :"#{k}="].each { |m| send :undef_method, m }
-    end
+    @attributes&.each_key { |k| [:"#{k}", :"#{k}="].each &method(:undef_method) }
     # define attributes at the keyvals passed to this method as an argument,
     # merged with the attributes of the superclass, if there is one.
     @attributes = keyvals.merge(superclass&.attributes || {})

@@ -38,7 +38,7 @@ The `default` method is also defined, which is the same as passing `attributes` 
 
 ```
 Foo.default
-# => #<Foo:0x007fef7398f6b0 @a=0, @b=2>
+# => #<Foo:0x007fef7398f6b0 @a=0, @b=1>
 ```
 
 It works with interitance also:
@@ -73,6 +73,6 @@ Foo.default.b
 # => 1
 ```
 
-The whole source code is about 15 un-minified lines without comments.
+The whole source code is 12 un-minified lines without comments.
 
 use at own risk
