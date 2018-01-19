@@ -84,3 +84,7 @@ Foo.default.b
 The whole source code is 12 un-minified lines without comments.
 
 use at own risk
+
+## todo
+
+implement `attributes#delete` and `attributes[]=`
